@@ -10,7 +10,7 @@
 
     <div class="alert-box" id="alert">
         <p id="s">Alert 박스</p>
-        <button onclick="알림창('none')">X</button>
+        <button id="close">X</button>
     </div>
     <button onclick="알림창('block')">버튼1</button>
     <button onclick="내용변경('아이디입력해라')">버튼2</button>
@@ -25,6 +25,10 @@
         function 내용변경(arg){
             document.getElementById('s').innerHTML = arg;
         }
+
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('alert').style.display = 'none';
+        });
 
     </script>
     
