@@ -9,13 +9,22 @@
 <body>
 
     <div class="alert-box" id="alert">
-        Alert 박스
-        <button onclick="document.getElementById('alert').style.display = 'none';">X</button>
+        <p id="s">Alert 박스</p>
+        <button onclick="알림창('none')">X</button>
     </div>
-    <button onclick="document.getElementById('alert').style.display = 'block';">버튼</button>
+    <button onclick="알림창('block')">버튼1</button>
+    <button onclick="내용변경('아이디입력해라')">버튼2</button>
+    <button onclick="내용변경('비번입력해라')">버튼3</button>
 
     <script>
 
+        function 알림창(arg){
+            document.getElementById('alert').style.display = arg;
+        }
+
+        function 내용변경(arg){
+            document.getElementById('s').innerHTML = arg;
+        }
 
     </script>
     
